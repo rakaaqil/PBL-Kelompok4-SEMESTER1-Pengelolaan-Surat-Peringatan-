@@ -1,0 +1,132 @@
+:root{
+  --navy:#0b6edb;
+  --navy-2:#0a5fc1;
+  --accent:#0d6efd;
+  --muted:#cfd7e6;
+  --card-bg: #ffffff10; /* subtle dark */
+  --glass: rgba(255,255,255,0.06);
+}
+
+/* Reset & base */
+*{box-sizing:border-box}
+body{
+  font-family: 'Montserrat', sans-serif;
+  background-image: url('background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+/* Header: blue gradient bar like wireframe */
+.site-header{
+  background: linear-gradient(90deg, var(--navy), var(--navy-2));
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  position:sticky;
+  top:0;
+  z-index:60;
+  padding-top:18px;
+  padding-bottom:18px;
+}
+.site-header .container{
+  position:relative;
+}
+.logo-wrap{
+  width:56px;
+  height:56px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:8px;
+}
+.logo-img{
+  width:40px;
+  height:40px;
+  object-fit:contain;
+  display:block;
+}
+.dept-name{
+  font-weight:700;
+  color:#e6eefb;
+  font-size:16px;
+}
+.btn-login{
+  border-radius:10px;
+  border: 2px solid rgba(255,255,255,0.7);
+  padding: 10px 20px;
+  color:#243447;
+  background: #fff;
+  font-weight:700;
+  letter-spacing: .6px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+/* Hero background: blurred background image with overlay */
+
+
+/* Large image card on left */
+.hero-card-large{
+  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+  border-radius: 18px;
+  box-shadow: 0 18px 42px rgba(0,0,0,0.45);
+  overflow:hidden;
+
+}
+.rounded-main{
+  width:100%;
+  height:auto;
+  display:block;
+  border-radius: 12px;
+  object-fit:cover;
+  box-shadow: none;
+}
+
+/* Stat cards (right) - following wireframe: blue gradient with big number and label */
+.stat-panel-blue{
+  background: linear-gradient(180deg, #2fa1ff, #0b78e6);
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+  min-height:110px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  padding: 20px;
+  border: 6px solid rgba(255,255,255,0.06);
+}
+.stat-number{
+  font-size: 44px;
+  font-weight:900;
+  color:#fff;
+  line-height:1;
+  margin-bottom:6px;
+  text-shadow: 0 3px 8px rgba(0,0,0,0.25);
+}
+.stat-label{
+  font-size: 16px;
+  color: #e9f5ff;
+  margin-top:0;
+  font-weight:700;
+}
+
+/* Footer copyright */
+.footer-copy{
+  color: rgba(255,255,255,0.75);
+  font-size:13px;
+  margin-top:18px;
+}
+
+/* Responsive tweaks */
+@media (max-width:1199.98px){
+  .stat-number{ font-size:40px; }
+}
+@media (max-width:991.98px){
+  .row{ gap:18px; }
+}
+@media (max-width:767.98px){
+  .dept-name{ display:none; }
+  .col-lg-8, .col-lg-4 { flex: 0 0 100%; max-width: 100%; }
+  .stat-panel-blue{ width:100%; }
+  .stat-number{ font-size: 34px; }
+  .rounded-main{ border-radius:12px; height:auto; }
+}

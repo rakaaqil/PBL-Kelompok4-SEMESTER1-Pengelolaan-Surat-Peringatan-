@@ -1,0 +1,110 @@
+:root{
+  --blue-1:#36a6ff;
+  --blue-2:#2b98e6;
+  --sp1-color: #fff9e6; /* light yellow */
+  --sp1-border: #ffb74d;
+  --sp2-color: #fff4e6; /* light orange */
+  --sp2-border: #ff8a4d;
+  --sp3-color: #ffecec; /* light red */
+  --sp3-border: #ff4d4d;
+  --drop-color: #ffdede;
+  --drop-border: #cc0000;
+  --neutral-bg: linear-gradient(180deg,#ffffff,#f2fbff);
+  --card-shadow: 0 12px 30px rgba(11,36,64,0.06);
+}
+
+/* base layout */
+body{
+  font-family: 'Montserrat', sans-serif;
+  margin:0;
+  background: linear-gradient(90deg,#1485ff 0%, #6ad1ff 100%);
+}
+
+/* container inner frame */
+.app-frame{
+  background: var(--neutral-bg);
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 10px 28px rgba(3,55,127,0.12);
+}
+
+/* top-right UI */
+.btn-circle{
+  width:48px; height:48px; border-radius:50%; background:#fff; border:0;
+  box-shadow: 0 6px 14px rgba(3,55,127,0.12);
+}
+.user-pill{
+  background: linear-gradient(90deg,#e9f7ff,#d7f0ff);
+  padding:8px 14px;
+  border-radius:26px;
+  border: 3px solid rgba(43,152,230,0.35);
+}
+
+/* profile card */
+.profile-card{
+  border-radius:14px;
+  min-height: 300px;
+  box-shadow: var(--card-shadow);
+  background: linear-gradient(180deg,#ffffff,#f8fcff);
+  border:6px solid rgba(54,166,255,0.14);
+}
+.avatar{
+  width:140px; height:140px; border-radius:50%;
+  background: radial-gradient(circle at 30% 30%, #9fd9ff, #0f7ef0);
+  border: 6px solid rgba(255,255,255,0.7);
+}
+
+/* welcome badge */
+.welcome-badge{
+  display:inline-block;
+  padding:10px 22px;
+  border-radius:28px;
+  border:4px solid rgba(43,152,230,0.6);
+  background: #fff;
+  font-weight:600;
+  box-shadow: 0 8px 20px rgba(3,55,127,0.06);
+}
+
+/* status box (center) */
+.status-box{
+  width: 60%;
+  min-height: 180px;
+  border-radius:12px;
+  border:6px solid rgba(0,0,0,0.04);
+  margin-top:12px;
+  box-shadow: 0 10px 24px rgba(3,55,127,0.06);
+}
+.status-box .status-message{
+  min-height: 110px;
+  border-radius:10px;
+  background: #fff;
+}
+
+/* notification panel */
+.notif-panel{
+  position:absolute; right:0; top:56px; width:260px; background:#fff; border-radius:12px;
+  border:4px solid rgba(3,55,127,0.12);
+  overflow:hidden; z-index:1050;
+}
+.notif-header{ background:linear-gradient(90deg,var(--blue-1),var(--blue-2)); color:#021b33; font-weight:700; padding:8px; text-align:center; }
+.notif-items .notif-item{ border:2px solid rgba(3,55,127,0.06); padding:8px; margin-bottom:8px; border-radius:8px; font-size:13px; cursor:pointer; }
+
+/* background color variations for SP */
+.neutral-bg .app-frame{ box-shadow: var(--card-shadow); }
+.sp1-bg{ background: linear-gradient(90deg,#fffbe6,#fff4d9); }
+.sp1-bg .app-frame{ border:6px solid var(--sp1-border); }
+.sp2-bg{ background: linear-gradient(90deg,#fff6eb,#ffe9d9); }
+.sp2-bg .app-frame{ border:6px solid var(--sp2-border); }
+.sp3-bg{ background: linear-gradient(90deg,#fff0f0,#ffdede); }
+.sp3-bg .app-frame{ border:6px solid var(--sp3-border); }
+.drop-bg{ background: linear-gradient(90deg,#ffdede,#ffcfcf); }
+.drop-bg .app-frame{ border:6px solid var(--drop-border); }
+
+/* emphasized title */
+#statusTitle{ padding:8px 12px; display:inline-block; border-radius:14px; border:4px solid rgba(0,0,0,0.05); background:#fff; font-weight:800; }
+
+/* small screens */
+@media (max-width:991px){
+  .status-box{ width: 100%; }
+  .welcome-badge{ font-size:14px; }
+}
