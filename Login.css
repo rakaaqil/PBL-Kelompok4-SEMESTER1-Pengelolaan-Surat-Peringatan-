@@ -1,11 +1,7 @@
 :root{
   --blue-1: #2aa0ff;
   --blue-2: #0d7fe8;
-  --card-bg: rgba(255,255,255,0.08);
-  --white-glow: rgba(255,255,255,0.25);
-  --navy-deep: #0b4a8b;
   --input-radius: 12px;
-  --card-radius: 14px;
   --accent-shadow: rgba(3,55,127,0.28);
 }
 
@@ -20,19 +16,17 @@ body{
   -moz-osx-font-smoothing:grayscale;
 }
 
-/* layout center */
 .login-wrap{ width: 420px; max-width: 94%; }
 
-/* card */
 .login-card{
   background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+  text-align: center;
   border-radius: 18px;
   border: 6px solid rgba(255,255,255,0.12);
   box-shadow: 0 12px 30px var(--accent-shadow), inset 0 3px 10px rgba(255,255,255,0.02);
   position: relative;
 }
 
-/* title */
 .login-title{
   margin-left: 25%;
   margin-right: 25%;
@@ -46,10 +40,9 @@ body{
   font-size:16px;
 }
 
-/* role toggle */
 .role-toggle{
   width: 320px;
-  max-width: 95%;
+  max-width: 100%;
   height: 50px;
   background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(245,245,245,0.96));
   border-radius: 12px;
@@ -83,7 +76,6 @@ body{
   box-shadow: 0 6px 18px rgba(12,88,162,0.35), inset 0 1px 0 rgba(255,255,255,0.6);
 }
 
-/* fancy inputs */
 .fancy-input{
   background: #fff;
   color:#0b2340;
@@ -96,7 +88,6 @@ body{
 }
 .fancy-input::placeholder{ color: rgba(11,35,64,0.35); font-weight:600; }
 
-/* login button */
 .btn-login{
   background: #fff;
   color: #031b30;
@@ -109,10 +100,8 @@ body{
 }
 .btn-login:active{ transform: translateY(1px); }
 
-/* copyright */
 .copy{ color: rgba(11,35,64,0.8); font-size:12px; font-weight:600; }
 
-/* small screens tweaks */
 @media (max-width:480px){
   .role-toggle{ height:48px; gap:6px; padding:4px; }
   .login-title{ font-size:14px; padding:6px 18px; transform: translateY(-6px); }
