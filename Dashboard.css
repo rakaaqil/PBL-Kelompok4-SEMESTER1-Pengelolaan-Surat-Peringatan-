@@ -1,13 +1,9 @@
 :root{
   --navy:#0b6edb;
   --navy-2:#0a5fc1;
-  --accent:#0d6efd;
-  --muted:#cfd7e6;
-  --card-bg: #ffffff10; /* subtle dark */
-  --glass: rgba(255,255,255,0.06);
 }
 
-/* Reset & base */
+/* Global */
 *{box-sizing:border-box}
 body{
   font-family: 'Montserrat', sans-serif;
@@ -18,7 +14,7 @@ body{
   position: relative;
 }
 
-/* Header: blue gradient bar like wireframe */
+/* Header */
 .site-header{
   background: linear-gradient(90deg, var(--navy), var(--navy-2));
   border-bottom: 1px solid rgba(255,255,255,0.06);
@@ -61,16 +57,12 @@ body{
   box-shadow: 0 6px 18px rgba(0,0,0,0.15);
 }
 
-/* Hero background: blurred background image with overlay */
-
-
-/* Large image card on left */
+/* Hero / Main */
 .hero-card-large{
   background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
   border-radius: 18px;
   box-shadow: 0 18px 42px rgba(0,0,0,0.45);
   overflow:hidden;
-
 }
 .rounded-main{
   width:100%;
@@ -81,7 +73,7 @@ body{
   box-shadow: none;
 }
 
-/* Stat cards (right) - following wireframe: blue gradient with big number and label */
+/* Stats */
 .stat-panel-blue{
   background: linear-gradient(180deg, #2fa1ff, #0b78e6);
   border-radius: 16px;
@@ -109,14 +101,13 @@ body{
   font-weight:700;
 }
 
-/* Footer copyright */
 .footer-copy{
   color: rgba(255,255,255,0.75);
   font-size:13px;
   margin-top:18px;
 }
 
-/* Responsive tweaks */
+/* Responsive tweaks used by dashboard.php */
 @media (max-width:1199.98px){
   .stat-number{ font-size:40px; }
 }
